@@ -16,6 +16,14 @@
     color:#cdad00;
       
     }
+    if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
   </style>
   <body><h1>
     <p id=grid ><span> }~{Core + Credit}~{ <span></body>
@@ -33,6 +41,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  
 }
 input[type=text], input[type=password2] {
   width: 100%;
@@ -41,6 +50,7 @@ input[type=text], input[type=password2] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  localStorage.setItem("lastname", password2);
 }
 
 button {
