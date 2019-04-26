@@ -23,7 +23,8 @@
    Username: <input type="text" name="usrnme"><br>
      
   Password: <input type="text" name="psswrd"><br>
-  <button type="submit">Click</button>
+    
+  <input type="submit" value="Submit">
 </form> 
 
       
@@ -31,7 +32,7 @@
 // Check browser support
 if (typeof(Storage) !== "undefined") {
   // Store
-  localStorage.setItem("username", "usrnme");
+ localStorage.setItem("username", "usrnme");
   localStorage.setItem("password", "psswrd");
 
 // Retrieve
