@@ -32,6 +32,7 @@ params = getParams();
 username = unescape(params["username"]);
 password = unescape(params["password"]);
 password2 = unescape(params["password2"]);
+ document.getElementById("result").innerHTML = localStorage.getItem("password");
 document.write("Username = " + username + "<br>");
 document.write("Password = " + password2 + "<br>");
 </script>
