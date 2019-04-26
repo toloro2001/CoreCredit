@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
-<body>
-hi</body>
-
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+username = unescape(params["username"]);
+password = unescape(params["password"]);
+age = unescape(params["age"]);
+document.write("Username = " + username + "<br>");
+document.write("Password = " + password + "<br>");
+document.write("age = " + age + "<br>");
+</script>
 </html>
