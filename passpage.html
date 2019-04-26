@@ -29,11 +29,11 @@ params[nameVal[0]] = nameVal[1];
 return params;
 }
 params = getParams();
-username = unescape(params["username"]);
-password = unescape(params["password"]);
+username = unescape(params["uname"]);
+password = unescape(params["psw2"]);
 age = unescape(params["age"]);
-document.write("Username = " + username + "<br>");
-document.write("Password = " + password + "<br>");
+document.write("Username = " + uname + "<br>");
+document.write("Password = " + psw2 + "<br>");
 document.write("age = " + age + "<br>");
 </script>
 </html>
