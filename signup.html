@@ -33,44 +33,7 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
-
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  
-}
-  input[type=text], input[type=email] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  
-}
-  input[type=text], input[type=firstname] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  
-}
-  input[type=text], input[type=lastname] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  
-}
-  input[type=text], input[type=username] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -88,7 +51,6 @@ input[type=text], input[type=password2] {
   box-sizing: border-box;
   localStorage.setItem("lastname", password2);
 }
-
 button {
   background-color: #cdad00;
   color: white;
@@ -98,36 +60,29 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #000000;
 }
-
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
 img.coin {
   width: 40%;
   border-radius: 50%;
 }
-
 .container {
   padding: 16px;
 }
-
 span.psw {
   float: right;
   padding-top: 16px;
 }
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -144,53 +99,37 @@ span.psw {
 
 <h2>Signup Form</h2>
 
+<form action="login.html">
 <form action="loadsignup.html">
   <div class="imgcontainer">
     <img src="cointfront.jpg" alt="Coin" class="Coin">
   </div>
-
   <div class="container">
-    <label for="firstname"><b>First Name</b></label>
-    <input type="firstname" placeholder="Firstname" name="firstname" required>
-    <label for="lastname"><b>Last Name</b></label>
-    <input type="lastname" placeholder="Lastname" name="lastname" required>
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
     <label for="password2"><b>Password</b></label>
     <input type="password2" placeholder="Confirm Password" name="password2" required>
-    <label for="email"><b>Email</b></label>
-    <input type="Email" placeholder="Email:____@____.___" name="Email" required>
         
     <button type="submit">Signup</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
-
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
   </div>
 </form>
-
 </body>
-      <?php
+</html><?php
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$email="email";
-$class1 = "per1";
-$class2 = "per2";
-$class3 = "per3";
-$class4 = "per4";
-$class5 = "per5";
-$class6 = "per6";
-$class7 = "per7";
-$creditballance="balance";
+$dbname = "myDB";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $class1,$class2,$class3,$class4,$class5,$class6,$class7,$creditbalance);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -199,7 +138,6 @@ if ($conn->connect_error) {
 // sql to create table
 $sql = "CREATE TABLE MyGuests (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-password VARCHAR(10) NOT NULL,
 firstname VARCHAR(30) NOT NULL,
 lastname VARCHAR(30) NOT NULL,
 email VARCHAR(50),
@@ -214,5 +152,3 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
-</html>
-
